@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
 
     [Header("Gravity")]
+    public float baseGravity = 2f;
+    public float maxFallSpeed = 10f;
+    public float fallSpeedMultiplier = 2f;
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -51,11 +54,27 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
+        isGrounded();
+        Gravity();
     }
 
     private void Update()
     {
-        isGrounded();
+        
+        
+    }
+
+    private void Gravity()
+    {
+        if(rb.linearVelocity.y > 0)
+        {
+            rb.gravityScale = baseGravity * fallSpeedMultiplier;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -maxFallSpeed));
+        }
+        else
+        {
+            rb.gravityScale = baseGravity;
+        }
     }
 
     private void isGrounded()

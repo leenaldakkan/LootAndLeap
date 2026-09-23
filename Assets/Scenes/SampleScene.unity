@@ -12904,7 +12904,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 68, y: 18, z: 0}
+  - first: {x: 57, y: 18, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 15
@@ -12914,7 +12914,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 69, y: 18, z: 0}
+  - first: {x: 58, y: 18, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 14
@@ -12924,7 +12924,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 68, y: 19, z: 0}
+  - first: {x: 57, y: 19, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 13
@@ -12934,7 +12934,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 69, y: 19, z: 0}
+  - first: {x: 58, y: 19, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 12
@@ -13259,17 +13259,17 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 449770092}
     m_ColliderPaths:
-    - - X: 700333312
+    - - X: 590333312
         Y: 181666656
-      - X: 700333312
+      - X: 590333312
         Y: 200333328
-      - X: 679666688
+      - X: 569666688
         Y: 200333328
-      - X: 679666688
+      - X: 569666688
         Y: 182333328
-      - X: 683666688
+      - X: 573666624
         Y: 179666672
-      - X: 699000000
+      - X: 589000000
         Y: 179666672
     - - X: 530333344
         Y: 161666656
@@ -13357,12 +13357,12 @@ CompositeCollider2D:
         Y: -10333333
   m_CompositePaths:
     m_Paths:
-    - - {x: 69.89999, y: 17.966667}
-      - {x: 70.03333, y: 18.166674}
-      - {x: 70.0333, y: 20.033333}
-      - {x: 67.96667, y: 20.033304}
-      - {x: 67.96668, y: 18.233326}
-      - {x: 68.36668, y: 17.966667}
+    - - {x: 58.899986, y: 17.966667}
+      - {x: 59.033333, y: 18.166674}
+      - {x: 59.0333, y: 20.033333}
+      - {x: 56.96667, y: 20.033304}
+      - {x: 56.966682, y: 18.233326}
+      - {x: 57.36667, y: 17.966667}
     - - {x: 52.899986, y: 15.966666}
       - {x: 53.033337, y: 16.166674}
       - {x: 53.033306, y: 18.033333}
@@ -13723,7 +13723,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.52, y: -2.024, z: -10}
+  m_LocalPosition: {x: -12.65, y: -2.024, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17905,7 +17905,7 @@ Transform:
   m_GameObject: {fileID: 883830746}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.52, y: -2.024, z: -10}
+  m_LocalPosition: {x: -12.65, y: -2.024, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19017,6 +19017,7 @@ GameObject:
   - component: {fileID: 1122430096}
   - component: {fileID: 1122430098}
   - component: {fileID: 1122430097}
+  - component: {fileID: 1122430099}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -19154,7 +19155,7 @@ Transform:
   m_GameObject: {fileID: 1122430090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.52, y: -2.024, z: 0}
+  m_LocalPosition: {x: -12.65, y: -2.024, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19174,6 +19175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b1bb6368a16614db199b7e5ad24928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1122430099}
   moveSpeed: 5
   jumpPower: 10
   maxJumps: 2
@@ -19223,7 +19225,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 2}
+    oldSize: {x: 2, y: 2.1875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -19258,6 +19260,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &1122430099
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122430090}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e94105f24ce41314d839a4478406c14f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1148922707
 GameObject:
   m_ObjectHideFlags: 0
@@ -19417,7 +19441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1285580022
 Transform:
   m_ObjectHideFlags: 0

@@ -5,6 +5,8 @@ using UnityEngine.XR;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator animator;
+    
     [Header("Movement")]
     public float moveSpeed = 5f;
 
@@ -43,25 +45,37 @@ public class PlayerController : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
                 jumpsRemaining--;
+                animator.SetTrigger("jump");
             }
 
             else if (context.canceled && rb.linearVelocity.y > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-            }
+                //animator.SetTrigger("jump");
+        }
     }
 
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
+
+        if (moveInput.x != 0)
+        {
+            transform.localScale = new Vector3(Mathf.Sign(moveInput.x), 1, 1);
+        }
+
         isGrounded();
         Gravity();
+
+        animator.SetFloat("yVelocity", rb.linearVelocity.y);
+        animator.SetFloat("magnitude", Mathf.Abs(rb.linearVelocity.x));
+
     }
 
     private void Update()
     {
-        
-        
+
+
     }
 
     private void Gravity()
@@ -79,9 +93,14 @@ public class PlayerController : MonoBehaviour
 
     private void isGrounded()
     {
-        if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer) && rb.linearVelocity.y <=0)
+        if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer) && rb.linearVelocity.y <=0.01f)
         {
             jumpsRemaining = maxJumps;
+            animator.SetBool("isGrounded", true);
+        }
+        else
+        {
+            animator.SetBool("isGrounded", false);
         }
         
     }

@@ -103,20 +103,20 @@ TextureImporter:
       name: Idle 05_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 2
+        x: 17
+        y: 3
         width: 42
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.39655173}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9ec71efa3d793dc20800000000000000
-      internalID: 3230092293199461609
+      spriteID: feff2f96b8f19d343b91a8e22094a9b7
+      internalID: -1394851843
       vertices: []
       indices: 
       edges: []
@@ -133,9 +133,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Idle 05_0: 3230092293199461609
+      Idle 05_0: -1394851843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

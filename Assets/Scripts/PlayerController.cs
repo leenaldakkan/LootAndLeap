@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float jumpPower = 10f;
     public int maxJumps = 2;
     int jumpsRemaining;
+    public AudioSource jumpAudio;
 
     [Header("Ground Check")]
     public Transform groundCheckPos;
@@ -46,7 +47,8 @@ public class PlayerController : MonoBehaviour
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
                 jumpsRemaining--;
                 animator.SetTrigger("jump");
-            }
+                jumpAudio.Play();
+        }
 
             else if (context.canceled && rb.linearVelocity.y > 0)
             {
